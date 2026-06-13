@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gerakan Pramuka Indonesia - Sejarah & Informasi Lengkap</title>
+
+<!-- Bootstrap 5.3 + Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --primary-gold: #D4AF37;
+  --primary-brown: #5A3B1C;
+  --dark-bg: #1A1A1A;
+  --card-bg: rgba(255,255,255,0.95);
+  --glass-bg: rgba(255,255,255,0.1);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 80px; }
+body { 
+  font-family: 'Poppins', sans-serif; 
+  overflow-x: hidden;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+}
+
+/* Particle Background */
+.particles {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  pointer-events: none; z-index: 1;
+  background-image: 
+    radial-gradient(2px 2px at 20px 30px, #eee, transparent),
+    radial-gradient(2px 2px at 40px 70px, rgba(255,255,255,0.8), transparent),
+    radial-gradient(1px 1px at 90px 40px, #fff, transparent),
+    radial-gradient(1px 1px at 130px 80px, rgba(255,255,255,0.6), transparent);
+  background-repeat: repeat;
+  background-size: 200px 100px;
+  animation: particles 30s linear infinite;
+}
+
+@keyframes particles {
+  from { transform: translateY(0) rotate(0deg); }
+  to { transform: translateY(-100px) rotate(360deg); }
+}
+
+/* Navbar Premium */
+.navbar {
+  background: rgba(26,26,26,0.95) !important;
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(212,175,55,0.3);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 1rem 0;
+}
+
+.navbar.scrolled {
+  padding: 0.5rem 0;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+}
+
+.navbar-brand {
+  font-weight: 800;
+  font-size: 1.8rem;
+  background: linear-gradient(45deg, var(--primary-gold), #FFD700);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Hero Section */
+.hero {
+  min-height: 100vh;
+  background: linear-gradient(135deg, rgba(0,0,0,0.7), rgba(0,0,0,0.4)),
+              url('https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80') center/cover;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-content h1 {
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 800;
+  background: linear-gradient(45deg, #FFD700, #FFA500, var(--primary-gold));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: glow 3s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from { filter: drop-shadow(0 0 20px #FFD700); }
+  to { filter: drop-shadow(0 0 30px #FFA500); }
+}
+
+/* Glassmorphism Cards */
+.glass-card {
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 24px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+  position: relative;
+}
+
+.glass-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.1), transparent);
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.glass-card:hover {
+  transform: translateY(-15px) scale(1.02);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+}
+
+.glass-card:hover::before { opacity: 1; }
+
+/* Timeline */
+.timeline {
+  position: relative;
+  padding: 2rem 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to bottom, var(--primary-gold), #FFD700);
+  border-radius: 2px;
+}
+
+.timeline-item {
+  position: relative;
+  margin: 3rem 0;
+  width: 50%;
+}
+
+.timeline-item:nth-child(odd) {
+  margin-left: 0;
+  left: 0;
+}
+
+.timeline-item:nth-child(even) {
+  margin-right: 0;
+  left: 50%;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: var(--primary-gold);
+  border-radius: 50%;
+  top: 20px;
+  right: -30px;
+  box-shadow: 0 0 0 4px rgba(212,175,55,0.3);
+}
+
+.timeline-item:nth-child(even)::before {
+  left: -30px;
+  right: auto;
+}
+
+.timeline-content {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(15px);
+  padding: 2rem;
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+/* Stats Cards */
+.stat-card {
+  background: linear-gradient(135deg, rgba(255,255,255,0.2), rgba(255,255,255,0.05));
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 20px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.4s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.stat-number {
+  font-size: 3rem;
+  font-weight: 800;
+  background: linear-gradient(45deg, var(--primary-gold), #FFD700);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Section Headers */
+.section-header {
+  position: relative;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.section-header h2 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  background: linear-gradient(45deg, var(--primary-gold), #FFD700);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+}
+
+.section-header h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-gold), #FFD700);
+  border-radius: 2px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .timeline::before { left: 20px; }
+  .timeline-item { width: 100%; left: 60px !important; margin-left: 60px !important; }
+  .timeline-item::before { left: -40px !important; }
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 { font-size: 3rem; }
+  .timeline-item { left: 0 !important; margin-left: 0 !important; }
+  .timeline::before { left: 10px; }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in-up { 
+  opacity: 0; 
+  animation: fadeInUp 0.8s ease forwards; 
+}
+
+.delay-1 { animation-delay: 0.1s; }
+.delay-2 { animation-delay: 0.2s; }
+.delay-3 { animation-delay: 0.3s; }
+</style>
+</head>
+
+<body>
+<!-- Particle Background -->
+<div class="particles"></div>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#hero">
+      <i class="bi bi-patch-check-fill me-2"></i>PRAMUKA <span class="text-warning">INDONESIA</span>
+    </a>
+    
+    <div class="d-flex align-items-center">
+      <button class="btn btn-outline-warning btn-sm me-3 fw-bold" onclick="toggleTheme()">
+        <i class="bi bi-moon-stars-fill"></i> Mode
+      </button>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <i class="bi bi-list text-white fs-3"></i>
+      </button>
+    </div>
+
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link fw-bold" href="#hero">Beranda</a></li>
+        <li class="nav-item"><a class="nav-link fw-bold" href="#sejarah">Sejarah</a></li>
+        <li class="nav-item"><a class="nav-link fw-bold" href="#tentang">Tentang</a></li>
+        <li class="nav-item"><a class="nav-link fw-bold" href="#struktur">Struktur</a></li>
+        <li class="nav-item"><a class="nav-link fw-bold" href="#dharma">Dasa Dharma</a></li>
+        <li class="nav-item"><a class="nav-link fw-bold" href="#daftar">Daftar</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section id="hero" class="hero">
+  <div class="container text-center text-white position-relative z-2">
+    <div class="hero-content fade-in-up">
+      <h1 class="mb-4">Gerakan Pramuka<br><span class="text-warning">Indonesia</span></h1>
+      <p class="lead mb-5 fs-4">Satu-satunya organisasi kepanduan yang diakui negara, membentuk generasi emas bangsa melalui pendidikan karakter berbasis Pancasila.</p>
+      <div class="d-flex flex-column flex-md-row gap-3 justify-content-center">
+        <a href="#sejarah" class="btn btn-warning btn-lg px-5 py-3 fw-bold shadow-lg fs-5">
+          <i class="bi bi-book-half me-2"></i>Baca Sejarah
+        </a>
+        <a href="#daftar" class="btn btn-outline-light btn-lg px-5 py-3 fw-bold fs-5">
+          <i class="bi bi-person-plus-fill me-2"></i>Gabung Pramuka
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Statistik Pramuka -->
+<section class="py-5">
+  <div class="container">
+    <div class="row g-4 text-center">
+      <div class="col-lg-3 col-md-6">
+        <div class="stat-card fade-in-up delay-1">
+          <div class="stat-number">17</div>
+          <h5 class="text-white fw-bold mb-2">Juta Anggota</h5>
+          <p class="text-white-50 mb-0">Aktif di seluruh Indonesia</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="stat-card fade-in-up delay-2">
+          <div class="stat-number">514</div>
+          <h5 class="text-white fw-bold mb-2">Kwartir Daerah</h5>
+          <p class="text-white-50 mb-0">Cakupan 38 Provinsi</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="stat-card fade-in-up delay-3">
+          <div class="stat-number">1945</div>
+          <h5 class="text-white fw-bold mb-2">Tahun Lahir</h5>
+          <p class="text-white-50 mb-0">Gerakan Pramuka RI</p>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6">
+        <div class="stat-card fade-in-up delay-1">
+          <div class="stat-number">4</div>
+          <h5 class="text-white fw-bold mb-2">Tingkatan</h5>
+          <p class="text-white-50 mb-0">Siaga • Penggalang • Penegak • Pandega</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Sejarah Pramuka -->
+<section id="sejarah" class="py-5 bg-dark bg-opacity-75">
+  <div class="container">
+    <div class="text-center section-header mb-5">
+      <h2 class="text-white">📜 Sejarah Lengkap Pramuka</h2>
+      <p class="lead text-white-50">Dari dunia hingga Indonesia - Perjalanan panjang pembentukan karakter bangsa</p>
+    </div>
+    
+    <div class="timeline">
+      <div class="timeline-item fade-in-up">
+        <div class="timeline-content">
+          <h4 class="text-warning mb-3 fw-bold">1907 - Kelahiran Scout Dunia</h4>
+          <p class="text-white-50 mb-0">Sir Robert Baden-Powell mengadakan perkemahan pertama di Brownsea Island, Inggris. 20 anak laki-laki dilatih keterampilan dasar kepanduan.</p>
+        </div>
+      </div>
+      
+      <div class="timeline-item fade-in-up">
+        <div class="timeline-content">
+          <h4 class="text-warning mb-3 fw-bold">1910 - Scout untuk Semua</h4>
+          <p class="text-white-50 mb-0">Baden-Powell menerbitkan "Scouting for Boys". Gerakan ini menyebar ke 29 negara dalam 4 tahun.</p>
+        </div>
+      </div>
+      
+      <div class="timeline-item fade-in-up">
+        <div class="timeline-content">
+          <h4 class="text-warning mb-3 fw-bold">1912 - Masuk Indonesia</h4>
+          <p class="text-white-50 mb-0">Nederlandsche Padvinders organisasi pertama di Hindia Belanda. Sri Sultan Hamengkubuwono VIII aktif mendukung.</p>
+        </div>
+      </div>
+      
+      <div class="timeline-item fade-in-up">
+        <div class="timeline-content">
+          <h4 class="text-warning mb-3 fw-bold">14 Agustus 1945 - Lahirnya Pramuka RI</h4>
+          <p class="text-white-50 mb-0"><strong>Sukacita! Satyaku Kudarmakan Darmaku Kubaktikan!</strong> Dr. (H.C.) Drs. H. Sudarsono menjadi Kepala Pertama Gerakan Pramuka Indonesia.</p>
+        </div>
+      </div>
+      
+      <div class="timeline-item fade-in-up">
+        <div class="timeline-content">
+          <h4 class="text-warning mb-3 fw-bold">1961 - Tunggal & Resmi</h4>
+          <p class="text-white-50 mb-0">Peraturan Pemerintah No. 238 tahun 1961 menetapkan Pramuka sebagai satu-satunya organisasi kepanduan di Indonesia.</p>
+        </div>
+      </div>
+      
+      <div class="timeline-item fade-in-up">
+        <div class="timeline-content">
+          <h4 class="text-warning mb-3 fw-bold">1970 - Kwarnas Pertama</h4>
+          <p class="text-white-50 mb-0">Komite Pembina Nasional menjadi Kwartir Nasional. Komjen Pol. (Purn.) L.B. Murthi Ketua I.</p>
+        </div>
+      </div>
+      
+      <div class="timeline-item fade-in-up">
+        <div class="timeline-content">
+          <h4 class="text-warning mb-3 fw-bold">1982 - Makin Maju</h4>
+          <p class="text-white-50 mb-0">Peraturan Pemerintah No. 17 menetapkan Pramuka sebagai satu-satunya organisasi kepanduan untuk seluruh anak Indonesia.</p>
+        </div>
+      </div>
+      
+      <div class="timeline-item fade-in-up">
+        <div class="timeline-content">
+          <h4 class="text-warning mb-3 fw-bold">1 Agustus - Hari Pramuka</h4>
+          <p class="text-white-50 mb-0">Diperingati setiap tahun sebagai Hari Lahir Pramuka Negara. Peringatan nasional dengan upacara bendera.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Tentang Pramuka -->
+<section id="tentang" class="py-5">
+  <div class="container">
+    <div class="row g-5 align-items-center">
+      <div class="col-lg-6">
+        <div class="fade-in-up">
+          <h2 class="section-header mb-4">
+            <i class="bi bi-shield-check text-warning me-3 fs-1 align-middle"></i>
+            Apa Itu Gerakan Pramuka?
+          </h2>
+          <div class="glass-card p-5 mb-4">
+            <h4 class="text-white fw-bold mb-3">Definisi Resmi</h4>
+            <p class="text-white-50 fs-6 mb-0">
+              Gerakan Pramuka adalah <strong>gerakan pendidikan nonformal</strong> yang bersifat <strong>untuk, oleh dan bersama anak</strong>, 
+              berlandaskan Pancasila dan berjiwa kebangsaan untuk membentuk <strong>generasi muda Indonesia</strong> yang berbudi pekerti luhur, 
+              berkarakter mulia, berjiwa patriotik, disiplin, beriman dan bertakwa kepada Tuhan YME, serta berwawasan Nusantara.
+            </p>
+          </div>
+          
+          <div class="row g-4">
+            <div class="col-md-6">
+              <div class="glass-card p-4 text-center">
+                <i class="bi bi-flag-fill text-warning fs-1 mb-3"></i>
+                <h5 class="text-white fw-bold">Satu-satunya</h5>
+                <p class="text-white-50 small mb-0">Diakui negara berdasarkan UU No. 12 Tahun 2010</p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="glass-card p-4 text-center">
+                <i class="bi bi-people-fill text-warning fs-1 mb-3"></i>
+                <h5 class="text-white fw-bold">17 Juta Anggota</h5>
+                <p class="text-white-50 small mb-0">Terbesar di Asia Tenggara</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-6">
+        <div class="glass-card p-5 fade-in-up">
+          <h4 class="text-white fw-bold mb-4">Visi & Misi Pramuka</h4>
+          
+          <div class="mb-4">
+            <h5 class="text-warning mb-2"><i class="bi bi-eye-fill me-2"></i>Visi</h5>
+            <p class="text-white-50 mb-0">"Gerakan Pramuka Indonesia menjadi gerakan pendidikan kepanduan yang berlandaskan Pancasila dan berjiwa kebangsaan yang terdepan dalam membentuk generasi muda Indonesia yang berbudi pekerti luhur, berkarakter mulia, berjiwa patriotik, disiplin, beriman dan bertakwa kepada Tuhan Yang Maha Esa, berwawasan Nusantara, dan berorientasi global."</p>
+          </div>
+          
+          <div>
+            <h5 class="text-warning mb-2"><i class="bi bi-target-fill me-2"></i>Misi</h5>
+            <ol class="text-white-50 ps-4 mb-0">
+              <li>Mengembangkan kepribadian Pramuka yang beriman, bertakwa, berakhlak mulia</li>
+              <li>Mengembangkan kecakapan hidup dan keterampilan umum</li>
+              <li>Mengembangkan kecintaan kepada alam dan budaya bangsa</li>
+              <li>Mengembangkan kecintaan kepada NKRI dan Pancasila</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Struktur Organisasi -->
+<section id="struktur" class="py-5 bg-dark bg-opacity-75">
+  <div class="container">
+    <div class="text-center section-header mb-5">
+      <h2 class="text-white">🏛️ Struktur Organisasi Lengkap</h2>
+    </div>
+    
+    <div class="row g-4">
+      <div class="col-lg-3 col-md-6">
+        <div class="glass-card text-center p-4 h-100 fade-in-up">
+          <i class="bi bi-building text-warning fs-1 mb-3"></i>
+          <h4 class="text-white fw-bold mb-3">Kwartir Nasional</h4>
+          <p class="text-white-50 mb-0">Kepemimpinan tertinggi Gerakan Pramuka di Indonesia</p>
+          <small class="text-warning fw-bold">Kepala: Komjen Pol. (Purn.) Dr. Budi Gunawan</small>
+        </div>
+      </div>
+      
+      <div class="col-lg-3 col-md-6">
+        <div class="glass-card text-center p-4 h-100 fade-in-up">
+          <i class="bi bi-geo-alt-fill text-warning fs-1 mb-3"></i>
+          <h4 class="text-white fw-bold mb-3">Kwartir Daerah</h4>
+          <p class="text-white-50 mb-0">514 Kwarda di 38 Provinsi</p>
+          <small class="text-warning fw-bold">Pimpinan Provinsi</small>
+        </div>
+      </div>
+      
+      <div class="col-lg-3 col-md-6">
+        <div class="glass-card text-center p-4 h-100 fade-in-up">
+          <i class="bi bi-building-check text-warning fs-1 mb-3"></i>
+          <h4 class="text-white fw-bold mb-3">Kwartir Cabang</h4>
+          <p class="text-white-50 mb-0">509 Kwarcab di seluruh Kabupaten/Kota</p>
+          <small class="text-warning fw-bold">Pimpinan Kabupaten/Kota</small>
+        </div>
+      </div>
+      
+      <div class="col-lg-3 col-md-6">
+        <div class="glass-card text-center p-4 h-100 fade-in-up">
+          <i class="bi bi-people text-warning fs-1 mb-3"></i>
+          <h4 class="text-white fw-bold mb-3">Gudep/Rakit</h4>
+          <p class="text-white-50 mb-0">Basis di tingkat sekolah</p>
+          <small class="text-warning fw-bold">Pangkalan Pramuka</small>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Tingkatan Pramuka -->
+    <div class="row g-4 mt-5">
+      <div class="col-12">
+        <h3 class="text-white text-center mb-5 fw-bold">🧒 4 Tingkatan Pramuka</h3>
+      </div>
+      
+      <div class="col-lg-3 col-md-6">
+        <div class="glass-card p-4 text-center h-100 fade-in-up">
+          <div class="bg-warning bg-opacity-20 p-4 rounded-circle mx-auto mb-3" style="width: 120px; height: 120px;">
+            <i class="bi bi-person-walking text-warning fs-1 d-flex align-items-center justify-content-center h-100"></i>
+          </div>
+          <h4 class="text-white fw-bold mb-2">Siaga</h4>
+          <p class="text-white-50 mb-2">7-10 tahun</p>
+          <small class="text-white">Regu • Pramuka Garuda</small>
+        </div>
+      </div>
+      
+      <div class="col-lg-3 col-md-6">
+        <div class="glass-card p-4 text-center h-100 fade-in-up">
+          <div class="bg-warning bg-opacity-20 p-4 rounded-circle mx-auto mb-3" style="width: 120px; height: 120px;">
+            <i class="bi bi-person-running text-warning fs-1 d-flex align-items-center justify-content-center h-100"></i>
+          </div>
+          <h4 class="text-white fw-bold mb-2">Penggalang</h4>
+          <p class="text-white-50 mb-2">11-15 tahun</p>
+          <small class="text-white">Regu • Pramuka Penggalang</small>
+        </div>
+      </div>
+      
+      <div class="col-lg-3 col-md-6">
+        <div class="glass-card p-4 text-center h-100 fade-in-up">
+          <div class="bg-warning bg-opacity-20 p-4 rounded-circle mx-auto mb-3" style="width: 120px; height: 120px;">
+            <i class="bi bi-person-badge text-warning fs-1 d-flex align-items-center justify-content-center h-100"></i>
+          </div>
+          <h4 class="text-white fw-bold mb-2">Penegak</h4>
+          <p class="text-white-50 mb-2">16-20 tahun</p>
+          <small class="text-white">Kelompok • Pramuka Penegak</small>
+        </div>
+      </div>
+      
+      <div class="col-lg-3 col-md-6">
+        <div class="glass-card p-4 text-center h-100 fade-in-up">
+          <div class="bg-warning bg-opacity-20 p-4 rounded-circle mx-auto mb-3" style="width: 120px; height: 120px;">
+            <i class="bi bi-person-heart text-warning fs-1 d-flex align-items-center justify-content-center h-100"></i>
+          </div>
+          <h4 class="text-white fw-bold mb-2">Pandega</h4>
+          <p class="text-white-50 mb-2">21-25 tahun</p>
+          <small class="text-white">Kelompok • Pramuka Pandega</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Dasa Dharma -->
+<section id="dharma" class="py-5">
+  <div class="container">
+    <div class="text-center section-header mb-5">
+      <h2>🛡️ Dasa Dharma Pramuka</h2>
+      <p class="lead text-muted">10 Sumpah suci yang menjadi pedoman hidup Pramuka</p>
+    </div>
+    
+    <div class="row g-4">
+      <div class="col-lg-6">
+        <div class="glass-card p-4 h-100 fade-in-up">
+          <div class="d-flex align-items-start mb-4">
+            <div class="bg-warning bg-opacity-20 p-3 rounded-circle me-4 flex-shrink-0">
+              <i class="bi bi-1-circle-fill text-warning fs-4"></i>
+            </div>
+            <div>
+              <h5 class="fw-bold text-white mb-1">1. Takwa kepada Tuhan Yang Maha Esa</h5>
+              <p class="text-white-50 mb-0">Beriman dan bertakwa kepada Tuhan sesuai agama masing-masing</p>
+            </div>
+          </div>
+          <div class="d-flex align-items-start mb-4">
+            <div class="bg-warning bg-opacity-20 p-3 rounded-circle me-4 flex-shrink-0">
+              <i class="bi bi-2-circle-fill text-warning fs-4"></i>
+            </div>
+            <div>
+              <h5 class="fw-bold text-white mb-1">2. Cinta alam dan kasih sayang sesama manusia</h5>
+              <p class="text-white-50 mb-0">Menjaga kelestarian alam dan peduli terhadap sesama</p>
+            </div>
+          </div>
+          <div class="d-flex align-items-start mb-4">
+            <div class="bg-warning bg-opacity-20 p-3 rounded-circle me-4 flex-shrink-0">
+              <i class="bi bi-3-circle-fill text-warning fs-4"></i>
+            </div>
+            <div>
+              <h5 class="fw-bold text-white mb-1">3. Patriot yang sopan dan kesatria</h5>
+              <p class="text-white-50 mb-0">Cinta tanah air dengan sopan santun dan berjiwa ksatria</p>
+            </div>
+          </div>
+          <div class="d-flex align-items-start">
+            <div class="bg-warning bg-opacity-20 p-3 rounded-circle me-4 flex-shrink-0">
+              <i class="bi bi-4-circle-fill text-warning fs-4"></i>
+            </div>
+            <div>
+              <h5 class="fw-bold text-white mb-1">4. Patuh dan suka bermusyawarah</h5>
+              <p class="text-white-50 mb-0">Taat pada aturan dan gemar musyawarah mufakat</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-lg-6">
+        <div class="glass-card p-4 h-100 fade-in-up">
+          <div class="d-flex align-items-start mb-4">
+            <div class="bg-warning bg-opacity-20 p-3 rounded-circle me-4 flex-shrink-0">
+              <i class="bi bi-5-circle-fill text-warning fs-4"></i>
+            </div>
+            <div>
+              <h5 class="fw-bold text-white mb-1">5. Rela menolong dan tabah</h5>
+              <p class="text-white-50 mb-0">Siap menolong dan tegar menghadapi cobaan</p>
+            </div>
+          </div>
+          <div class="d-flex align-items-start mb-4">
+            <div class="bg-warning bg-opacity-20 p-3 rounded-circle me-4 flex-shrink-0">
+              <i class="bi bi-6-circle-fill text-warning fs-4"></i>
+            </div>
+            <div>
+              <h5 class="fw-bold text-white mb-1">6. Rajin, terampil dan gembira</h5>
+              <p class="text-white-50 mb-0">Disiplin, mahir berkarya dan ceria</p>
+            </div>
+          </div>
+          <div class="d-flex align-items-start mb-4">
+            <div class="bg-warning bg-opacity-20 p-3 rounded-circle me-4 flex-shrink-0">
+              <i class="bi bi-7-circle-fill text-warning fs-4"></i>
+            </div>
+            <div>
+              <h5 class="fw-bold text-white mb-1">7. Hemat, cekap dan bersahaja</h5>
+              <p class="text-white-50 mb-0">Bijaksana dalam keuangan dan hidup sederhana</p>
+            </div>
+          </div>
+          <div class="d-flex align-items-start">
+            <div class="bg-warning bg-opacity-20 p-3 rounded-circle me-4 flex-shrink-0">
+              <i class="bi bi-8-circle-fill text-warning fs-4"></i>
+            </div>
+            <div>
+              <h5 class="fw-bold text-white mb-1">8. Disiplin, berani dan setia</h5>
+              <p class="text-white-50 mb-0">Teratur, berani dan dapat diandalkan</p>
+            </div>
+          </div>
+          <div class="d-flex align-items-start mt-4">
+            <div class="bg-warning bg-opacity-20 p-3 rounded-circle me-4 flex-shrink-0">
+              <i class="bi bi-9-circle-fill text-warning fs-4"></i>
+            </div>
+            <div>
+              <h5 class="fw-bold text-white mb-1">9. Bertanggung jawab dan dapat dipercaya</h5>
+              <p class="text-white-50 mb-0">Menerima konsekuensi dan jujur</p>
+            </div>
+          </div>
+          <div class="d-flex align-items-start mt-3">
+            <div class="bg-warning bg-opacity-20 p-3 rounded-circle me-4 flex-shrink-0">
+              <i class="bi bi-0-circle-fill text-warning fs-4"></i>
+            </div>
+            <div>
+              <h5 class="fw-bold text-white mb-1">10. Suci dalam pikiran, perkataan dan perbuatan</h5>
+              <p class="text-white-50 mb-0">Murni dan bersih dalam segala hal</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Form Pendaftaran -->
+<section id="daftar" class="py-5 bg-dark bg-opacity-90">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 col-xl-6">
+        <div class="glass-card p-5">
+          <div class="text-center mb-5">
+            <i class="bi bi-person-badge-fill text-warning fs-1 mb-3 d-block"></i>
+            <h2 class="text-white fw-bold mb-2">Mulai Petualanganmu</h2>
+            <p class="text-white-50 mb-0">Daftar sekarang dan menjadi bagian dari 17 juta Pramuka Indonesia!</p>
+          </div>
+          
+          <form id="registerForm">
+            <div class="row g-4">
+              <div class="col-md-6">
+                <input type="text" class="form-control fs-6" id="nama" placeholder="👤 Nama Lengkap" required>
+              </div>
+              <div class="col-md-6">
+                <input type="number" class="form-control fs-6" id="umur" placeholder="📅 Umur (tahun)" min="7" max="25" required>
+              </div>
+              <div class="col-12">
+                <select class="form-select fs-6" id="tingkatan" required>
+                  <option value="" disabled selected>Pilih Tingkatan</option>
+                  <option value="siaga">🐺 Siaga (7-10 tahun)</option>
+                  <option value="penggalang">🦁 Penggalang (11-15 tahun)</option>
+                  <option value="penegak">🦅 Penegak (16-20 tahun)</option>
+                  <option value="pandega">🦋 Pandega (21-25 tahun)</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <input type="email" class="form-control fs-6" id="email" placeholder="📧 Email (untuk konfirmasi)">
+              </div>
+              <div class="col-12">
+                <textarea class="form-control fs-6" id="alasan" rows="3" placeholder="💭 Alasan ingin bergabung Pramuka?"></textarea>
+              </div>
+            </div>
+            
+            <div class="d-grid mt-4">
+              <button type="submit" class="btn btn-warning btn-lg fw-bold py-3 fs-5 shadow-lg" id="submitBtn">
+                <span class="submit-text">
+                  <i class="bi bi-check-circle-fill me-2"></i>MULAI PETUALANGAN
+                </span>
+                <span class="loading d-none">
+                  <i class="bi bi-hourglass-split me-2"></i>Memproses...
+                </span>
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-dark bg-opacity-95 py-5 mt-5">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <h4 class="text-warning mb-3">
+          <i class="bi bi-patch-check-fill me-2"></i>Gerakan Pramuka
+        </h4>
+        <p class="text-white-50">Satu-satunya organisasi kepanduan resmi negara yang membentuk karakter bangsa sejak 1945.</p>
+      </div>
+      <div class="col-lg-4">
+        <h5 class="text-white fw-bold mb-3">Informasi Penting</h5>
+        <ul class="list-unstyled">
+          <li><i class="bi bi-calendar-check text-warning me-2"></i>1 Agustus - Hari Pramuka</li>
+          <li><i class="bi bi-people text-warning me-2"></i>17 Juta Anggota Aktif</li>
+          <li><i class="bi bi-flag text-warning me-2"></i>514 Kwarda Nasional</li>
+          <li><i class="bi bi-award text-warning me-2"></i>Diakui WOSM</li>
+        </ul>
+      </div>
+      <div class="col-lg-4">
+        <h5 class="text-white fw-bold mb-3">Hubungi Kami</h5>
+        <div class="d-flex gap-3">
+          <a href="#" class="text-white-50 fs-4 hover:text-warning transition-all">
+            <i class="bi bi-instagram"></i>
+          </a>
+          <a href="#" class="text-white-50 fs-4 hover:text-warning transition-all">
+            <i class="bi bi-whatsapp"></i>
+          </a>
+          <a href="#" class="text-white-50 fs-4 hover:text-warning transition-all">
+            <i class="bi bi-youtube"></i>
+          </a>
+          <a href="#" class="text-white-50 fs-4 hover:text-warning transition-all">
+            <i class="bi bi-facebook"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <hr class="my-4 opacity-25">
+    <div class="text-center">
+      <p class="text-white-50 small m-0">
+        &copy; 2025 Gerakan Pramuka Indonesia. 
+        Satyaku Kudarmakan Darmaku Kubaktikan. 
+        Crafted with ❤️ by <strong>Afrildo</strong> | Premium Edition
+      </p>
+    </div>
+  </div>
+</footer>
+
+<!-- Back to Top -->
+<button class="btn btn-warning shadow-lg border-0 position-fixed rounded-circle top-btn" 
+        id="topBtn" onclick="topFunction()" title="Kembali ke atas" style="width: 60px; height: 60px; bottom: 30px; right: 30px;">
+  <i class="bi bi-arrow-up-circle-fill fs-4 text-dark"></i>
+</button>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+// Navbar Scroll Effect & Animations
+window.addEventListener('scroll', () => {
+  const navbar = document.querySelector('.navbar');
+  const topBtn = document.getElementById('topBtn');
+  
+  navbar.classList.toggle('scrolled', window.scrollY > 50);
+  topBtn.style.display = window.scrollY > 400 ? 'block' : 'none';
+  
+  // Trigger fade-in animations
+  document.querySelectorAll('.fade-in-up').forEach((el, index) => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight * 0.8 && !el.classList.contains('animated')) {
+      el.classList.add('animated');
+      el.style.animationDelay = `${index * 0.1}s`;
+    }
+  });
+});
+
+// Smooth scroll to top
+function topFunction() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// Theme Toggle
+function toggleTheme() {
+  document.body.classList.toggle('dark-theme');
+  const icon = document.querySelector('button[onclick="toggleTheme()"] i');
+  icon.classList.toggle('bi-moon-stars-fill');
+  icon.classList.toggle('bi-sun-fill');
+}
+
+// Form Submission
+document.getElementById('registerForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  const submitBtn = document.getElementById('submitBtn');
+  const submitText = submitBtn.querySelector('.submit-text');
+  const loading = submitBtn.querySelector('.loading');
+  
+  submitText.classList.add('d-none');
+  loading.classList.remove('d-none');
+  submitBtn.disabled = true;
+  
+  // Simulate API call
+  setTimeout(() => {
+    // Get form data
+    const formData = {
+      nama: document.getElementById('nama').value,
+      umur: document.getElementById('umur').value,
+      tingkatan: document.getElementById('tingkatan').value,
+      email: document.getElementById('email').value,
+      alasan: document.getElementById('alasan').value
+    };
+    
+    console.log('Pendaftaran:', formData);
+    
+    // Show success message
+    const alertDiv = document.createElement('div');
+    alertDiv.className = 'alert alert-success alert-dismissible fade show position-fixed';
+    alertDiv.style.cssText = 'top: 100px; right: 20px; z-index: 9999; max-width: 400px;';
+    alertDiv.innerHTML = `
+      <i class="bi bi-check-circle-fill me-2"></i>
+      <strong>Sukses!</strong> Pendaftaran ${formData.nama} berhasil dikirim! 
+      Tim Pramuka akan menghubungi dalam 24 jam.
+      <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    `;
+    document.body.appendChild(alertDiv);
+    
+    // Reset form
+    this.reset();
+    submitText.classList.remove('d-none');
+    loading.classList.add('d-none');
+    submitBtn.disabled = false;
+  }, 2500);
+});
+
+// Initialize animations
+document.addEventListener('DOMContentLoaded', () => {
+  // Add animated class for timeline items
+  document.querySelectorAll('.timeline-item').forEach((item, index) => {
+    item.style.animationDelay = `${index * 0.2}s`;
+  });
+});
+</script>
+
+</body>
+</html>
